@@ -55,9 +55,8 @@ out
 echo -e "\033[0;32mLoading Response\033[0m"
 echo " "
 sleep 1
-disp6='cat /tmp/rs_temp | egrep -w --color -E "HTTP/1.1|200|302|301"'
+disp6='cat /tmp/rs_temp | grep -a -i -E -A9 "200|302|301"'
 eval $disp6
 echo "Process Done! Hit return key to exit..."
 read ext
-dt > /dev/null 2>&1
 out
